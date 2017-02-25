@@ -132,17 +132,17 @@ h1, h2, h3 {color: navy;}
 ## 颜色
 CSS2支持17种名字的颜色，如下图：
 
-![17种CSS2颜色](/images/css2_color.png)
+![17种CSS2颜色](./images/css2_color.png)
 
 除了名称之外，可以使用代表红绿蓝三颜色的16进制数字表示，分别有3位和6位表示法。
 
 ![3位色](./images/3bit_color.png)
 
-![6位色](/images/6bit_color.png)
+![6位色](./images/6bit_color.png)
 
 可以通过调整三位数字来得到不同颜色：
 
-![trick](/images/trick4color.png)
+![trick](./images/trick4color.png)
 
 还能够通过RGB值（0-255或者是百分比值），来得到颜色。
 
@@ -221,7 +221,7 @@ CSS有三种标记样式：
 ### 颜色
 内边距总是跟元素的背景色一样，所以当你设置背景色时，你会发现背景色在元素本身和内边距上都生效了。外边距总是透明的。
 
-![box_color](/images/box_color.png)
+![box_color](./images/box_color.png)
 
 ### 边框
 可以用边线或者边框来装饰元素。
@@ -230,7 +230,7 @@ CSS有三种标记样式：
 
 样式包括：
 
-![border](/images/border.png)
+![border](./images/border.png)
 
 你也可以通过设置样式为 none 或 hidden 来明确地移除边框，或者设置边框颜色为 transparent 来让边框不可见，后者不会改变布局。
 
