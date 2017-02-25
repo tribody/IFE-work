@@ -136,7 +136,7 @@ CSS2支持17种名字的颜色，如下图：
 
 除了名称之外，可以使用代表红绿蓝三颜色的16进制数字表示，分别有3位和6位表示法。
 
-![3位色](/images/3bit_color.png)
+![3位色](./images/3bit_color.png)
 
 ![6位色](/images/6bit_color.png)
 
