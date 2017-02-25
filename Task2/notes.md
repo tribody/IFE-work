@@ -1,4 +1,6 @@
-#层叠和样式
+该笔记全部摘录自[MDN CSS入门教程](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/)
+
+#层叠和样式（CSS基础知识）
 
 对于层叠来说，共有三种主要来源：
 
@@ -262,3 +264,238 @@ CSS有三种标记样式：
 这两个属性可以应用于任何文本类内容，不只是纯文本。 需要注意的是，它们会被元素的子元素继承， 所以需要在子元素中将它们关闭，以免出现意想不到的效果
 
 ### 浮动(重要)
+[float](https://developer.mozilla.org/zh-CN/docs/Web/CSS/float)属性强制元素靠左或靠右。 这是控制元素位置和大小的简单方法。
+
+使用[clear](https://developer.mozilla.org/zh-CN/docs/Web/CSS/clear)属性可以避免其它元素受到浮动效果的影响。
+
+### 位置
+可以为一个元素指定[position](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position)属性为以下值之一，来设置其位置。
+
+- relative：通过为元素指定一个值，元素相对于其原来位置移动。也可以使用margin来达到同样的效果。
+- fixed：为元素指定相对于窗口的确切位置 。即使文档的其它元素出现滚动，元素位置仍然不变。
+- absolute：为元素指定相对于其父元素的确切位置。只有在父元素使用 relative, fixed or absolute 时才有效。你可以为任何父元素指定 position: relative;因为它不会产生移动。
+- static：默认值。当明确要关闭位置属性时使用。
+
+和position属性(除了static)一起使用的, 有下列属性: top, right, bottom, left, width, height 通过设置它们来指定元素的位置或大小。
+
+## 信息：表格
+表格结构：表格开始的特定的行组是表头（header: `<thead>`）。表格最后的特定行组是表尾（footer: `<tfoot>`）。表格中主要的行就是表体（body: `<tbody>`），这些表体也可能被分组。
+
+### 边框
+单元格没有外边距。
+
+但是单元格有边框和内边距。默认情况下，边框被表格的[border-spacing](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-spacing)属性值间隔。你也可以通过设置表格的[border-collapse](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-collapse)属性值为collapse来完全移除间隔。
+
+	标题
+
+	`<caption>`元素是用在整个表格的一个标签。默认下，它显示在表格的顶部。
+
+	可以设置<caption>的caption-side属性值为bottom来将标签移到表格的底部。
+
+	想要样式化caption的文本，可以使用任何常规的文本属性。
+
+	空单元格
+
+	你可以通过为表格元素指定empty-cells属性值show来显示空单元格（就是其边框和背景）。
+
+	你也可以指定[empty-cells](https://developer.mozilla.org/zh-CN/docs/Web/CSS/empty-cells): hide;来隐藏边框和背景，那么如果一个单元格的父元素设置了背景，背景将通过空单元格显示出来。
+
+一个标准表格实例：
+
+``` html
+<table id="demo-table">
+  <caption>Oceans</caption>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Area</th>
+      <th>Mean depth</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>million km<sup>2</sup></th>
+      <th>m</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Arctic</th>
+      <td>13,000</td>
+      <td>1,200</td>
+    </tr>
+    <tr>
+      <th>Atlantic</th>
+      <td>87,000</td>
+      <td>3,900</td>
+    </tr>
+    <tr>
+      <th>Pacific</th>
+      <td>180,000</td>
+      <td>4,000</td>
+    </tr>
+    <tr>
+      <th>Indian</th>
+      <td>75,000</td>
+      <td>3,900</td>
+    </tr>
+    <tr>
+      <th>Southern</th>
+      <td>20,000</td>
+      <td>4,500</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Total</th>
+      <td>361,000</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Mean</th>
+      <td>72,000</td>
+      <td>3,800</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+``` css
+/*** Style for doc3.html (Tables) ***/
+
+#demo-table {
+  font: 100% sans-serif;
+  background-color: #efe;
+  border-collapse: collapse;
+  empty-cells: show;
+  border: 1px solid #7a7;
+}
+
+#demo-table > caption {
+  text-align: left;
+  font-weight: bold;
+  font-size: 200%;
+  border-bottom: .2em solid #4ca;
+  margin-bottom: .5em;
+}
+
+
+/* basic shared rules */
+#demo-table th,
+#demo-table td {
+  text-align: right;
+  padding-right: .5em;
+}
+
+#demo-table th {
+  font-weight: bold;
+  padding-left: .5em;
+}
+
+
+/* header */
+#demo-table > thead > tr:first-child > th {
+  text-align: center;
+  color: blue;
+}
+
+#demo-table > thead > tr + tr > th {
+  font-style: italic;
+  color: gray;
+}
+
+/* fix size of superscript */
+#demo-table sup {
+  font-size: 75%;
+}
+
+/* body */
+#demo-table td {
+  background-color: #cef;
+  padding:.5em .5em .5em 3em;
+}
+
+#demo-table tbody th:after {
+  content: ":";
+}
+
+
+/* footer */
+#demo-table tfoot {
+  font-weight: bold;
+}
+
+#demo-table tfoot th {
+  color: blue;
+}
+
+#demo-table tfoot th:after {
+  content: ":";
+}
+
+#demo-table > tfoot td {
+  background-color: #cee;
+}
+
+#demo-table > tfoot > tr:first-child td {
+  border-top: .2em solid #7a7;
+}
+```
+
+## [信息：媒体](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Getting_Started/Media)
+CSS的作用是将网页文档以更友好的展现方式呈现给用户。
+
+例如，假设你现在正用一台显示设备来阅读这篇文章，同时你也想把它投影到屏幕上，或者打印出来，而显示设备、屏幕投影和打印等这些媒介都有自己的特点，CSS就是为文档提供在不同媒介上展示的适配方法。
+
+CSS通过使用[@media](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media)的格式来对特定的媒介指定适配规则。
+
+### 打印（略）
+
+### 用户界面
+CSS有一些特殊的属性能够支持设备的用户界面，像电脑显示器。这使得文档的展示随着用户界面的情况而动态地变化。
+
+并没有针对用户界面设备的特殊媒介类型。
+
+下面有五种特殊的选择器:
+
+|Selector|Selects|
+|:------|:---------|
+|E:[hover](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:hover)|当鼠标悬浮在任何E元素上|
+|E:[focus](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:focus)|当元素获得键盘焦点|
+|E:[active](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:active)|当元素是当前的活动元素|
+|E:[link](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:link)|当元素超链接到一个url但是用户还没有访问过|
+|E:[visited](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:visited)|当元素超链接到一个url但是用户已经访问过|
+
+ cursor 属性指定鼠标的形状：一些常见的形状如下表所示。把你的鼠标放在列表的选项上来看浏览器中实际显示的鼠标形状:
+
+|Selctor|Selects|
+|:------|:---------|
+|pointer|指示超链接|
+|wait|表明程序无法接受输入|
+|progress|表明程序正在运行|
+|default|默认（通常是箭头）|
+
+[outline](https://developer.mozilla.org/zh-CN/docs/Web/CSS/outline)属性通过创建轮廓来表明获得键盘焦点。只有在父元素使用 relative, fixed or absolute 时才有效。你可以为任何父元素指定 position: relative;因为它不会产生移动。
+它的作用相当于[border](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border)属性，但与其不同的是它不能指明个别方向。
+
+一些其他的用户界面特性通常会通过属性来应用。例如，禁用或者只读的元素可以设置 disabled 属性和 readonly 属性。选择器可以通过方括: [disabled] 或者 [readonly]来指定这些属性。
+
+示例，这些规则规定了按钮在用户使用时动态变化的样式:
+
+``` css
+.green-button {
+  background-color:#cec;
+  color:#black;
+  border:2px outset #cec;
+  }
+
+.green-button[disabled] {
+  background-color:#cdc;
+  color:#777;
+  }
+
+.green-button:active {
+  border-style: inset;
+  } 
+```
+
+![button](./images/button.png)
