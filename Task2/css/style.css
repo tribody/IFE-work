@@ -1,20 +1,154 @@
+/* general page styles */
 * {
 	margin: 0;
 	padding: 0;
 }
 
-body {
-	background: #dedede;
+html {
+	font-family: Arial, 'Microsoft YaHei', 'sans serif';
+	font-size: 15px;
+	background-color: #ccc;
 }
 
-header {
-	background: #333333;
+/* nav-bar */
+.nav-bar {
+	position: relative;
+	height: 4em;
+	background-color: #333;
 }
 
-header h1 {
-
+.nav-bar .band {
+	margin-left: 2em;
 }
 
-header nav {
+.nav-bar .band img {
+	margin-top: -0.5em;
+}
 
+.nav-bar .menu {
+	position: absolute;
+	top: 1em;
+	right: 2em;
+}
+
+.nav-bar .menu li {
+	float: left;
+	margin-left: 1.5em;
+}
+
+.nav-bar .menu li a {
+	color: #bbb;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+}
+
+.nav-bar .menu li a:hover {
+	color: #555;
+}
+
+/* section card */
+.card {
+	margin: 2em;
+	padding: 2em 1.2em;
+	background-color: #fff;
+	border: .1em solid #ccc;
+	box-shadow: .1em .1em .1em;
+}
+
+.card h1, .card h4, .remark {
+	margin-bottom: .6em;
+}
+
+.card h4 {
+	color: #555;
+}
+
+.card .remark {
+	font-size: .5em;
+	color: #999;
+}
+
+.card article p {
+	text-indent: 2em;
+	line-height: 1.8em;
+}
+
+.card img {
+	display: block;
+	margin: 1em 0;
+}
+
+.card ul {
+	margin: 0 1em;
+	list-style: none;
+}
+
+.card ol {
+	margin: 0 3em;
+}
+
+.card ul li, .card ol li {
+	margin: .5em 0;
+}
+
+.card dl .photo {
+	width: 26em;
+	margin: 1em;
+	padding: 1em;
+	border: .1em solid #bbb;
+}
+
+.card table {
+	border-collapse: collapse;
+	text-align: left;
+	border: .1em solid #ccc;
+	width: 100%;
+}
+
+.card table thead th, table tfoot td {
+	font-size: .8em;
+}
+
+.card table tbody td {
+	font-size: .6em;
+}
+.card table th {
+	font-weight: bold;
+	background-color: #333;
+	color: #fff;
+}
+
+.card table thead th, .card table tbody td {
+	border: .1em solid #ccc;
+}
+
+.card table tfoot td {
+	font-weight: bold;
+	background-color: #ccc;
+}
+
+.card table th, .card table td {
+	padding: .4em;
+}
+
+.card aside h1 {
+	line-height: 2.5em;
+	padding-left: .5em;
+	border-left: .2em solid #333;
+}
+
+.card form div {
+	margin: 1em 0;
+}
+
+.card form {
+	text-align: center;
+}
+
+.card form .submit {
+	width: 100%;
+	height: 2.5em;
+	background-color: #0bf;
+	border-radius: 1em;
 }
