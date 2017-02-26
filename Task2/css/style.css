@@ -138,12 +138,52 @@ html {
 	border-left: .2em solid #333;
 }
 
-.card form div {
-	margin: 1em 0;
+.card form {
+	margin: 0 auto;
+	width: 500px;
+	padding: 1em;
+	border: 1px solid #ccc;
+	border-radius: 1em;
 }
 
-.card form {
-	text-align: center;
+.card form div + div {
+	margin-top: 1em;
+}
+
+
+.card form label {
+	display: inline-block;
+	width: 150px;
+	text-align: right;
+}
+
+.card form span {
+	display: block;
+	vertical-align: top;
+}
+
+.card input, .card textarea {
+	width: 300px;
+	box-sizing: border-box;
+	border: 1px solid #999;
+}
+
+.card input:focus, .card textarea:focus {
+	border-color: #000;
+}
+
+.card textarea {
+	vertical-align: top;
+	height: 5em;
+	resize: vertical;
+}
+
+.card .button {
+	padding-left: 90px;
+}
+
+button {
+	margin-left: .5em;
 }
 
 .card form .submit {

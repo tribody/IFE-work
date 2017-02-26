@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>团队介绍</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="container">
+		<div class="leftbox">
+			<div class="sefie">
+				<img src="img/me.jpg">
+				<div class="intro">
+					<p>何川</p>
+					<p>________</p>
+					<p>________</p>
+					<p>________</p>
+					<p>________</p>
+				</div>
+			</div>
+		</div>
+		<div class="rightbox">
+			<img src="img/me.jpg">
+			<img src="img/me.jpg">
+			<img src="img/me.jpg">
+			<img src="img/me.jpg">
+		</div>
+		<div class="middlebox">
+			<h1>清除浮动（clearfix hack）</h1>
+			<p>在使用浮动的时候经常会遇到一个古怪的事情：</p>
+			<div class="code">
+				<p>img&nbsp;{<br/>&nbsp;&nbsp;float: right;<br/>}</p>
+			</div>
+			<div class="div1">
+				<img src="img/eg.png">
+				<p>&lt;div&gt;</p>
+				<p>不......这个图片比包含它的元素还高，而且它是浮动的，于是它就溢出到了容器外面！</p>
+			</div>
+			<p>见证奇迹的时候到了！有一种比较丑陋的方法可以解决这个问题，它叫做<i>清除浮动（clearfix hack）</i>。</p>
+			<p>让我们加入一些新的CSS样式：</p>
+			<div class="code">
+				<p>.clearfix&nbsp;{<br/>&nbsp;&nbsp;overflow: auto;<br/>}</p>
+			</div>
+			<p>现在再看看发生了什么：</p>
+			<div class="div2">
+				<img src="img/eg.png">
+				<p>&lt;div class="clearfix"&gt;</p>
+				<p>好多了！</p>
+			</div>
+			<p>这个可以在现代浏览器上工作。如果你想要支持IE6，你就需要再加入如下样式：</p>
+			<div class="code">
+				<p>.clearfix&nbsp;{<br/>&nbsp;&nbsp;overflow: auto;<br/>&nbsp;&nbsp;zoom: 1;<br/>}</p>
+			</div>
+			<p>有些独特的浏览器需要“额外的关照”。<a href="http://stackoverflow.com/questions/211383/which-method-of-clearfix-is-best">清除浮动这潭水很深很深</a>，但是这个简单的解决方案已经可以在今天所有主要浏览器上工作。</p>
+		</div>
+
+	</div>
+
+</body>
+</html>

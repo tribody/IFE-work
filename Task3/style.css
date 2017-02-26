@@ -1,0 +1,150 @@
+/* clear browser default settings */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* main css settings */
+html {
+	font-family: Arial, "Microsoft YaHei";
+	font-size: 15px;
+}
+
+body {
+	padding: 20px;
+}
+
+#container {
+	position: relative;
+	overflow: auto;
+ 	padding: 20px;
+	background-color: #eee;
+	border: 1px solid #999;
+}
+
+/* leftbox start */
+.leftbox {
+	float: left;
+	width: 160px;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #999;
+}
+
+.sefie {
+	position: relative;
+	padding: 2px;
+	border: 1px solid #eee;
+}
+
+.sefie img {
+	width: 80px;
+}
+
+.sefie .intro {
+	position: absolute;
+	top: 1em;
+	right: 0;
+	width: 80px;
+}
+
+.sefie .intro p {
+	text-align: center;
+}
+
+/* leftbox end */
+
+/* middle start */
+.middlebox {
+	margin-left: 220px;
+	margin-right: 140px;
+	min-width: 450px;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #999;
+}
+
+.middlebox h1 {
+	margin: 1em;
+}
+
+.middlebox > p {
+	line-height: 2em;
+}
+
+.middlebox > div + p {
+	clear: both;
+}
+
+
+
+.middlebox .code {
+	line-height: 2em;
+	margin: 1em;
+	padding: 1em;
+	width: 400px;
+	background-color: #111;
+	border: 2px solid #555;
+	border-radius: 1em;
+}
+
+.middlebox .code p {
+	font-family: Tahoma, Arial;
+	color: #eee;
+}
+
+.middlebox .code p::after {
+	float: right;
+	content: 'CSS';
+	font-size: 2em;
+	color: #fff;
+}
+
+.middlebox .div1, .middlebox .div2 {
+	position: relative;
+	border: 2.5px solid #0af;
+}
+
+.middlebox .div1 > img, .middlebox .div2 > img {
+	float: right;
+	margin-top: 0;
+}
+
+.middlebox .div1 > img + p, .middlebox .div2 > img + p {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #0af;
+}
+
+.middlebox .div1 > p + p, .middlebox .div2 > p + p {
+	padding: 1em;
+}
+
+.middlebox .div2 {
+	overflow: auto;
+}
+
+
+/* .middlebox p {
+	text-indent: 2em;
+} */
+/* middle end */
+
+/* right start */
+.rightbox {
+	float: right;
+	padding: 20px;
+	width: 80px;
+	background-color: #fff;
+	border: 1px solid #999;
+}
+
+.rightbox img {
+	border: 1px solid #eee;
+	width: 80px;
+}
+.rightbox img + img {
+	margin-top: 10px;
+}
+/* right end */

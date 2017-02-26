@@ -131,48 +131,40 @@
 		<aside>
 			<h1>侧栏标题</h1>
 			<form>
-				<div class="email">
-					<label>请输入邮箱地址：</label>
-					<input type="text" name="emaliadress" placeholder="这是一个文本输入框">
-					<br>
-					<span>邮箱地址请按要求输入</span>
+				<div>
+					<label for="email">请输入邮箱地址：</label>
+					<input type="text" name="email">
+					<span>邮箱地址请按要求格式输入</span>
 				</div>
-				<div class="password">
-					<label>请输入密码：</label>
-					<input type="text" name="password" placeholder="这是一个文本输入框">
+				<div>
+					<label for="password">请输入密码：</label>
+					<input type="text" name="password">
 				</div>
-				<div class="repassword"
-					<label>请重复输入密码：</label>
-					<input type="text" name="repassword" placeholder="这是一个文本输入框">
-					<br>
-					<span>密码请为6-16位英文数字</span>
+				<div>
+					<label for="repassword">请重复输入密码：</label>
+					<input type="text" name="repassword">
 				</div>
+				<div>
+					<label for="sex">性别：</label>
+					<input type="radio" name="sex" value="male">男
+					<input type="radio" name="sex" value="female">女
 				</div>
-				<div class="sex">
-					<input type="radio" name="sex" value="man">男
-					<input type="radio" name="sex" value="woman">女
-				</div>
-				<div class="area">
+				<div>
+					<label for="area">地区</label>
 					<select>
 						<option value="beijing">北京</option>
 						<option value="shanghai">上海</option>
 						<option value="guangzhou">广州</option>
 					</select>
 				</div>
-				<div class="intro">
-					爱好：
-					<input type="checkbox" name="hobby">
-					<label>运动</label>
-					<input type="checkbox" name="hobby">
-					<label>艺术</label>
-					<input type="checkbox" name="hobby">
-					<label>科学</label>
-					<label>个人描述：</label>
-					<textarea type="detail" rows="4" cols="30" >
-						这是一个多行输入框，输入您的个人描述
+				<div>
+					<label for="intro">简介：</label>
+					<textarea>
 					</textarea>
 				</div>
-				<input class="submit" type="submit" name="submit" value="确认提交">
+				<div class="button">
+					<button type="submit">提交</button>
+				</div>
 			</form>
 		</aside>
 	</section>
