@@ -49,7 +49,16 @@ html {
 
 /* section card */
 .card {
+	margin:2em 500px 2em 2em;
+}
+
+.leftbar {
+	float: right;
+	width: 400px;
 	margin: 2em;
+}
+
+.card, .leftbar{
 	padding: 2em 1.2em;
 	background-color: #fff;
 	border: .1em solid #ccc;
@@ -75,7 +84,7 @@ html {
 }
 
 .card img {
-	display: block;
+	display: inline-block;
 	margin: 1em 0;
 }
 
@@ -92,11 +101,12 @@ html {
 	margin: .5em 0;
 }
 
-.card dl .photo {
-	width: 26em;
-	margin: 1em;
+.card img {
+	width: 140px;
+}
+.card figure {
+	display: inline-block;
 	padding: 1em;
-	border: .1em solid #bbb;
 }
 
 .card table {
@@ -138,60 +148,42 @@ html {
 	border-left: .2em solid #333;
 }
 
-.card form {
-	margin: 0 auto;
-	width: 500px;
-	padding: 1em;
-	border: 1px solid #ccc;
-	border-radius: 1em;
-}
-
-.card form div + div {
-	margin-top: 1em;
-}
-
-
-.card form label {
-	display: inline-block;
-	width: 150px;
+form label {
+	float: left;
+	width: 50%;
 	text-align: right;
+	padding: .5em 0;
 }
 
-.card form span {
+form span {
+	float: right;
+	width: 50%;
+	color: #ccc;
+	text-align: left;
+}
+
+form span, form input, form select, form textarea, form button {
+	margin: .5em 0;
+}
+
+form button {
 	display: block;
-	vertical-align: top;
+	margin: 0 auto;
+	width: 30%;
+	background-color: #38f;
+	border-radius: 5px;
 }
 
-.card input, .card textarea {
-	width: 300px;
-	box-sizing: border-box;
-	border: 1px solid #999;
+form button:hover {
+	cursor: pointer;
+	background-color: #68f;
 }
 
-.card input:focus, .card textarea:focus {
-	border-color: #000;
+.clearfix {
+	clear: both;
+	overflow: auto;
 }
 
-.card textarea {
-	vertical-align: top;
-	height: 5em;
-	resize: vertical;
-}
-
-.card .button {
-	padding-left: 90px;
-}
-
-button {
-	margin-left: .5em;
-}
-
-.card form .submit {
-	width: 100%;
-	height: 2.5em;
-	background-color: #0bf;
-	border-radius: 1em;
-}
 
 .footer {
 	height: 2em;

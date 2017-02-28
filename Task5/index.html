@@ -2,20 +2,59 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Task1</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Task5</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div class="nav-bar">
-	<div class="band"><img src="images/baidu.jpg"></div>
-	<ul class="menu">
-		<li><a href="">导航链接一</a></li>
-		<li><a href="">导航链接二</a></li>
-		<li><a href="">导航链接三</a></li>
-		<li><a href="">导航链接四</a></li>
-	</ul>
-</div>
-	<section class="card">
+	<div class="nav-bar">
+		<div class="band"><img src="images/baidu.jpg"></div>
+		<ul class="menu">
+			<li><a href="">导航链接一</a></li>
+			<li><a href="">导航链接二</a></li>
+			<li><a href="">导航链接三</a></li>
+			<li><a href="">导航链接四</a></li>
+		</ul>
+	</div>
+	<aside class="leftbar">
+		<h1>侧栏标题</h1>
+		<form>
+			<label for="email">请输入邮箱地址：</label>
+			<input type="text" name="email">
+			<div class="clearfix"></div>
+
+			<span>邮箱地址请按要求格式输入</span>
+			<div class="clearfix"></div>
+
+			<label for="password">请输入密码：</label>
+			<input type="text" name="password">
+			<div class="clearfix"></div>
+
+			<label for="repassword">请重复输入密码：</label>
+			<input type="text" name="repassword">
+			<div class="clearfix"></div>	
+
+			<label for="sex">性别：</label>
+			<input type="radio" name="sex" value="male">男
+			<input type="radio" name="sex" value="female">女
+			<div class="clearfix"></div>
+
+			<label for="area">地区：</label>
+			<select>
+				<option value="beijing">北京</option>
+				<option value="shanghai">上海</option>
+				<option value="guangzhou">广州</option>
+			</select>
+			<div class="clearfix"></div>
+
+			<label for="intro">简介：</label>
+			<textarea>
+			</textarea>
+			<div class="clearfix"></div>
+
+			<button type="submit">提交</button>
+		</form>
+	</aside>
+	<div class="card">
 		<h1>文章一级标题</h1>
 		<h4>文章二级标题</h4>
 		<div class="remark"><p>RiverHe 2017-2-25</p></div>
@@ -33,8 +72,8 @@
 			在学习这些资料时，要多思考，多提问，多质疑。相信通过和小伙伴们的交流，能让你的学习事半功倍。
 			</p>
 		</article>
-	</section>
-	<section class="card">
+	</div>
+	<div class="card">
 		<h1>文章一级标题</h1>
 		<h4>文章二级标题</h4>
 		<div class="remark"><p>RiverHe 2017-2-25</p></div>
@@ -58,32 +97,32 @@
 			<li>秋天</li>
 			<li>夏天</li>
 		</ul>
-	</section>
-	<section class="card">
+	</div>
+	<div class="card">
 		<h1>图片</h1>
-		<dl>
-			<div class="photo">
-				<dt>
-				<h3>风景</h3>
-				</dt>
-				<dd><img src="images/p2.jpg"></dd>
-			</div>
-			<div class="photo">
-				<dt>
-				<h3>风景</h3>
-				</dt>
-				<dd><img src="images/p2.jpg"></dd>
-			</div>
-			<div class="photo">
-				<dt>
-				<h3>风景</h3>
-				</dt>
-				<dd><img src="images/p2.jpg"></dd>
-			</div>
-		</dl>
-	</section>
+		<figure>
+			<figcaption>风景</figcaption>
+			<img src="images/p2.jpg">
+		</figure>
+		<figure>
+			<figcaption>风景</figcaption>
+			<img src="images/p2.jpg">
+		</figure>
+		<figure>
+			<figcaption>风景</figcaption>
+			<img src="images/p2.jpg">
+		</figure>
+		<figure>
+			<figcaption>风景</figcaption>
+			<img src="images/p2.jpg">
+		</figure>
+		<figure>
+			<figcaption>风景</figcaption>
+			<img src="images/p2.jpg">
+		</figure>
+	</div>
 
-	<section class="card">
+	<div class="card">
 		<h1>文章一级标题</h1>
 		<h4>文章二级标题</h4>
 		<div class="remark"><p>RiverHe 2017-2-25</p></div>
@@ -125,49 +164,9 @@
 				</tr>
 			</tfoot>
 		</table>
-	</section>
-
-	<section class="card">
-		<aside>
-			<h1>侧栏标题</h1>
-			<form>
-				<div>
-					<label for="email">请输入邮箱地址：</label>
-					<input type="text" name="email">
-					<span>邮箱地址请按要求格式输入</span>
-				</div>
-				<div>
-					<label for="password">请输入密码：</label>
-					<input type="text" name="password">
-				</div>
-				<div>
-					<label for="repassword">请重复输入密码：</label>
-					<input type="text" name="repassword">
-				</div>
-				<div>
-					<label for="sex">性别：</label>
-					<input type="radio" name="sex" value="male">男
-					<input type="radio" name="sex" value="female">女
-				</div>
-				<div>
-					<label for="area">地区</label>
-					<select>
-						<option value="beijing">北京</option>
-						<option value="shanghai">上海</option>
-						<option value="guangzhou">广州</option>
-					</select>
-				</div>
-				<div>
-					<label for="intro">简介：</label>
-					<textarea>
-					</textarea>
-				</div>
-				<div class="button">
-					<button type="submit">提交</button>
-				</div>
-			</form>
-		</aside>
-	</section>
+	</div>
+	<div class="clearfix"></div>
+	
 	<footer>
 		<div class="footer">
 			<p>版权所有©</p>
